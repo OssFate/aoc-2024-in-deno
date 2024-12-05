@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "linter": "deno fmt && deno lint",
+    "day": "deno run -R aoc.ts"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1"
+  }
+}
