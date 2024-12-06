@@ -10,7 +10,7 @@ enum upDown {
 async function one() {
   let stables = 0;
 
-  const inputFile = await readInputFile("day_two", InputType.Lines);
+  const inputFile = await readInputFile("day-two", InputType.Lines);
   for (const line of inputFile) {
     const values = line.split(" ").map((l) => toNumber(l));
 
@@ -24,7 +24,7 @@ async function one() {
 async function two() {
   let stables = 0;
 
-  const inputFile = await readInputFile("day_two", InputType.Lines);
+  const inputFile = await readInputFile("day-two", InputType.Lines);
   for (const line of inputFile) {
     const leLine = line.split(" ").map((l) => toNumber(l));
 

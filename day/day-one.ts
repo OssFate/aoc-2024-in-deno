@@ -1,12 +1,16 @@
 import { toNumber } from "../utils/convert.util.ts";
-import { InputType, readInputFile } from "../utils/fileReader.util.ts";
+import {
+  InputFiles,
+  InputType,
+  readInputFile,
+} from "../utils/fileReader.util.ts";
 
 async function one() {
   const firstList: number[] = [];
   const secondList: number[] = [];
 
   // first I'm going to read the input file
-  const inputFile = await readInputFile("day_one", InputType.Lines);
+  const inputFile = await readInputFile(InputFiles.day_one, InputType.Lines);
   for (const line of inputFile) {
     const values = line.split("   ");
     firstList.push(toNumber(values[0]));
@@ -30,7 +34,7 @@ async function two() {
   const secondList: number[] = [];
 
   // first I'm going to read the input file
-  const inputFile = await readInputFile("day_one", InputType.Lines);
+  const inputFile = await readInputFile("day-one", InputType.Lines);
   for (const line of inputFile) {
     const values = line.split("   ");
     firstList.push(toNumber(values[0]));

@@ -4,16 +4,19 @@ const inputExt = ".txt";
 export const InputFiles = {
   day_one: "day-one",
   day_two: "day-two",
+  day_three: "day-three",
 } as const;
 
-type InputFile = keyof typeof InputFiles;
+type ObjectValues<T> = T[keyof T];
+
+type InputFile = ObjectValues<typeof InputFiles>;
 
 export async function readInputFile<IT extends InputType>(
   file: InputFile,
   type: IT,
 ): Promise<ExpectedType[IT]> {
   const data = await Deno.readTextFile(
-    `${inputDir}${InputFiles[file]}${inputExt}`,
+    `${inputDir}${file}${inputExt}`,
   );
   let result;
   switch (type) {
